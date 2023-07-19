@@ -1,3 +1,8 @@
+// TIME
+const date = new Date()
+const time = date.toLocaleTimeString([], {timeStyle: "short"})
+document.getElementById('time').textContent = time
+
 // BACKGROUND IMAGE
 fetch('https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&query=nature')
     .then(res => res.json())
