@@ -1,6 +1,6 @@
 {
     "manifest_version": 3,
-    "name": "Personal Dashboard",
+    "name": "Dashboard",
     "version": "1.0.0",
     "description": "Momentum personal dashboard clone",
     "action": {
