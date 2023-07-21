@@ -6,6 +6,20 @@ function getTime() {
 }
 setInterval(getTime, 1000)
 
+// WORD / DEFINITION
+fetch('https://random-words-api.vercel.app/word')
+    .then(res => {
+        if (!res.ok) {
+          throw Error('Word data not available')
+        }
+        return res.json()
+    })
+    .then(data => {
+      document.getElementById('word').textContent = data[0].word
+      document.getElementById('definition').textContent = data[0].definition  
+    })
+    .catch(err => console.error(err))
+
 // WEATHER
 navigator.geolocation.getCurrentPosition(position => {
     getWeather(position.coords.latitude, position.coords.longitude)

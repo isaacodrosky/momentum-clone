@@ -29,9 +29,12 @@ main {
     justify-content: space-between;
 }
 
-h1 {
-    align-self: center;
+.center {
     margin-top: -50px;
+}
+
+.center h1 {
+    text-align: center;
     font-size: 4rem;
 }
 
@@ -77,4 +80,14 @@ h1 {
 
 #img-author {
     font-size: 0.8rem;
+}
+
+.word-container {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 1.3rem;
+}
+
+#word {
+    font-weight: 600;
 }
