@@ -18,7 +18,10 @@ fetch('https://random-words-api.vercel.app/word')
       document.getElementById('word').textContent = data[0].word
       document.getElementById('definition').textContent = data[0].definition  
     })
-    .catch(err => console.error(err))
+    .catch(err => {
+       console.error(err)
+       document.getElementById('word-container').textContent = '' 
+    })
 
 // WEATHER
 navigator.geolocation.getCurrentPosition(position => {
